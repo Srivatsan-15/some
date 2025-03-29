@@ -3,89 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Login Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
+
+        body {
             display: flex;
             justify-content: center;
-            background-color: #444;
-            padding: 0.5rem 0;
+            align-items: center;
+            height: 100vh;
+            background: #f4f4f4;
         }
-        nav a {
-            color: #fff;
+
+        .login-container {
+            width: 300px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            background: #0056b3;
+        }
+
+        .register-link {
+            margin-top: 10px;
+            display: block;
+            font-size: 14px;
+            color: #007bff;
             text-decoration: none;
-            margin: 0 1rem;
-            font-size: 1.1rem;
         }
-        nav a:hover {
+
+        .register-link:hover {
             text-decoration: underline;
-        }
-        .hero {
-            text-align: center;
-            padding: 2rem;
-            background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
-            color: #fff;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin: 0;
-        }
-        .hero p {
-            font-size: 1.5rem;
-        }
-        .content {
-            padding: 2rem;
-            text-align: center;
-        }
-        .content h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-        .content p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <section class="hero">
-        <h1>Your Journey Starts Here</h1>
-        <p>Discover amazing content and services</p>
-    </section>
-    <section class="content">
-        <h2>About Us</h2>
-        <p>We are dedicated to providing the best experience for our users. Explore our website to learn more about what we offer.</p>
-    </section>
-    <footer>
-        <p>&copy; 2023 My Website. All rights reserved.</p>
-    </footer>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+        <a href="#" class="register-link">Don't have an account? Register</a>
+    </div>
+
 </body>
 </html>
